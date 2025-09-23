@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Interiors of California",
+  title: "Interiors of California | We will floor you!",
   description:
     "We will floor you! Premium interior remodeling in Northern California.",
   openGraph: {
-    title: "Interiors of California",
+    title: "Interiors of California | We will floor you!",
     description:
       "We will floor you! Premium interior remodeling in Northern California.",
     url: "https://www.interiorsofcalifornia.com",
