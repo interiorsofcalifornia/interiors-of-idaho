@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Interiors of California",
   description: "We will floor you! Premium interior remodeling in Northern California.",
   openGraph: {
