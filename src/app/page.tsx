@@ -160,7 +160,7 @@ export default function InteriorsOfCaliforniaLanding() {
         <div className="mx-auto max-w-5xl px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold">Rooted in California craftsmanship</h2>
           <p className="mt-4 text-slate-700 max-w-3xl mx-auto">
-            Interiors of California is a women-led studio offering design, sourcing, and installation under one roof.
+            Interiors of California offers design, sourcing, and installation under one roof.
             We’re known for precise scheduling, transparent budgets, and considerate site practices—so your home looks extraordinary and the process feels easy.
           </p>
         </div>
