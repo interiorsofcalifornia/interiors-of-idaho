@@ -13,32 +13,32 @@ const services = [
   {
     eyebrow: "KITCHEN REMODELS",
     title: "Kitchens That Cook Up Style & Function",
-    desc: "The kitchen is the heart of your home. From custom cabinetry to backsplashes, countertops, and flooring, we deliver spaces that are both stylish and practical.",
+    desc: "The kitchen is the heart of your home—let’s make it unforgettable. From custom cabinetry to backsplashes, countertops, and flooring, we deliver spaces that are both stylish and practical.",
   },
   {
     eyebrow: "BATHROOM REMODELS",
     title: "Elevated Comfort, Everyday Luxury",
-    desc: "We transform bathrooms into relaxing, functional sanctuaries with beautiful tilework, smart storage, and finishes that reflect your style.",
+    desc: "We transform bathrooms into relaxing, functional sanctuaries. Think custom vanities, beautiful tilework, smart storage, and finishes that reflect your personal style—with meticulous attention to detail.",
   },
   {
     eyebrow: "BASEMENT FINISHING",
     title: "Basements, Reimagined from the Ground Down",
-    desc: "Turn unused square footage into fully finished living space, from cozy lounges and guest suites to gyms, theaters, and flex rooms.",
+    desc: "Turn unused square footage into fully finished living space—from cozy lounges and guest suites to gyms, home theaters, or wet bars. Expert framing, lighting, flooring, and finish work.",
   },
   {
     eyebrow: "EPOXY FLOORING & OUTDOOR AREAS",
     title: "Surfaces That Work as Hard as They Look",
-    desc: "Durable, low-maintenance finishes ideal for garages, basements, commercial spaces, and outdoor living areas.",
+    desc: "Sleek, strong, and low-maintenance—ideal for garages, basements, commercial spaces, and outdoor living areas. Durable finishes that resist moisture, wear, and time.",
   },
   {
     eyebrow: "FLOORING INSTALLATION",
     title: "Flooring That Elevates Every Step",
-    desc: "Hardwood, tile, carpet, luxury vinyl, engineered flooring, and stone installed with care and built to last.",
+    desc: "Hardwood and tile to carpet, luxury vinyl, engineered flooring, and stone. We’ll help you choose the perfect surface—installed with care and built to last.",
   },
   {
     eyebrow: "CUSTOM INSTALLATIONS",
     title: "Craftsmanship That Stands Out",
-    desc: "Trim, built-ins, stair details, and architectural touches that make a house feel truly custom.",
+    desc: "Staircases, trim, built-ins, and architectural details that make a house truly yours. Always done right the first time.",
   },
 ];
 
@@ -55,33 +55,33 @@ const whyChoose = [
   },
   {
     icon: <MapPin className="h-7 w-7" aria-hidden />,
-    title: "Locally Focused Service",
-    desc: "Serving Boise, Meridian, Eagle, Nampa, Caldwell and surrounding areas.",
+    title: "Locally Owned & Operated",
+    desc: "Serving all of Idaho with fast, reliable service.",
   },
   {
     icon: <Home className="h-7 w-7" aria-hidden />,
     title: "Function + Style",
-    desc: "Design-forward solutions that work beautifully for everyday living.",
+    desc: "Design-forward solutions that work for everyday living.",
   },
 ];
 
-const processImages = [
-  { src: "/kitchen1.webp", alt: "Kitchen remodel" },
-  { src: "/bathroom1.webp", alt: "Bathroom remodel" },
-  { src: "/basement.webp", alt: "Finished basement" },
-];
-
 const gallery = [
+  { src: "/basement.webp", alt: "Finished basement with carpet" },
+  { src: "/outdoor.webp", alt: "Covered patio and poolside entertaining area" },
   { src: "/kitchen1.webp", alt: "Modern kitchen with waterfall island" },
-  { src: "/bathroom1.webp", alt: "Bathroom remodel with custom glass shower" },
-  { src: "/basement.webp", alt: "Finished basement with wall-to-wall carpet" },
-  { src: "/outdoor.webp", alt: "Covered patio and outdoor entertaining area" },
   { src: "/kitchen2.webp", alt: "Bright kitchen with stone counters" },
   { src: "/kitchen3.webp", alt: "Kitchen with dining nook and island seating" },
-  { src: "/wood-kitchen.webp", alt: "Warm wood kitchen cabinetry" },
-  { src: "/bathroom2.webp", alt: "Spa-style bathroom with tub and shower" },
-  { src: "/stone-floor.webp", alt: "Stone flooring detail" },
-  { src: "/tile-shower.webp", alt: "Custom tiled shower detail" },
+  { src: "/wood-kitchen.webp", alt: "Warm wood kitchen cabinetry and cork flooring" },
+  { src: "/bathroom1.webp", alt: "Modern bathroom with large-format tile" },
+  { src: "/bathroom2.webp", alt: "Spa bathroom with tub and shower" },
+  { src: "/stone-floor.webp", alt: "Tile flooring detail" },
+  { src: "/tile-shower.webp", alt: "Custom tiled shower install" },
+];
+
+const processImages = [
+  { src: "/kitchen1.webp", alt: "Kitchen remodel detail" },
+  { src: "/bathroom1.webp", alt: "Bathroom remodel detail" },
+  { src: "/basement.webp", alt: "Finished basement project" },
 ];
 
 export default function InteriorsOfIdahoLanding() {
@@ -89,11 +89,7 @@ export default function InteriorsOfIdahoLanding() {
     <div className="min-h-screen bg-[#F6F7F9] text-slate-900">
       <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-[#F6F7F9]/85 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <img
-            src="/idaho-logo.png"
-            alt="Interiors of Idaho logo"
-            className="h-12 w-auto"
-          />
+          <img src="/idaho-logo.jpeg" alt="Interiors of Idaho logo" className="h-12 w-auto" />
 
           <nav className="hidden items-center gap-8 text-sm text-slate-800 md:flex">
             <a href="#services" className="hover:opacity-70">Services</a>
@@ -116,7 +112,7 @@ export default function InteriorsOfIdahoLanding() {
       <section className="relative overflow-hidden bg-black">
         <div className="absolute inset-0">
           <img
-            src="/hero.jpg"
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2200&auto=format&fit=crop"
             alt="Premium Idaho interior"
             className="h-full w-full object-cover"
           />
@@ -132,7 +128,7 @@ export default function InteriorsOfIdahoLanding() {
             className="max-w-3xl"
           >
             <p className="text-xs uppercase tracking-[0.22em] text-white/80">
-              BOISE • MERIDIAN • EAGLE • NAMPA • CALDWELL
+              SERVING ALL OF IDAHO
             </p>
 
             <h1 className="mt-4 text-5xl font-semibold leading-[0.95] text-white md:text-7xl">
@@ -290,7 +286,7 @@ export default function InteriorsOfIdahoLanding() {
             <div>
               <p className="text-sm font-medium text-slate-500">Gallery</p>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 md:text-5xl">
-                Refined interiors across Boise and the Treasure Valley.
+                Refined interiors across Idaho.
               </h2>
             </div>
 
@@ -342,7 +338,7 @@ export default function InteriorsOfIdahoLanding() {
               <div className="mt-10 space-y-5 text-2xl text-slate-700">
                 <p>(208) 204-6061</p>
                 <p>interiorsofidaho@gmail.com</p>
-                <p>Serving Boise, Meridian, Eagle, Nampa, Caldwell & surrounding areas</p>
+                <p>Serving All of Idaho</p>
                 <p>@interiors.of.idaho</p>
               </div>
             </div>
@@ -365,9 +361,7 @@ export default function InteriorsOfIdahoLanding() {
 
       <footer className="bg-white py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
-          <p className="text-xl text-slate-500">
-            © 2026 Interiors of Idaho. All rights reserved.
-          </p>
+          <p className="text-xl text-slate-500">© 2026 Interiors of Idaho. All rights reserved.</p>
           <div className="text-lg text-slate-500">
             interiorsofidaho@gmail.com · Instagram · Privacy · Terms
           </div>
