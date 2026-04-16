@@ -13,24 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Interiors of California",
+  title: "Interiors of Idaho",
   description:
-    "We will floor you! Premium interior remodeling in Northern California.",
+    "We will floor you! Premium interior remodeling in Idaho",
   openGraph: {
-    title: "Interiors of California",
+    title: "Interiors of Idaho",
     description:
-      "We will floor you! Premium interior remodeling in Northern California.",
+      "We will floor you! Premium interior remodeling in Idaho.",
     url: "https://www.interiorsofcalifornia.com",
-    siteName: "Interiors of California",
+    siteName: "Interiors of Idaho",
     images: ["https://www.interiorsofcalifornia.com/og.jpg"],
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Interiors of California",
+    title: "Interiors of Idaho",
     description:
-      "We will floor you! Premium interior remodeling in Northern California.",
+      "We will floor you! Premium interior remodeling in Idaho.",
     images: ["https://www.interiorsofcalifornia.com/og.jpg"],
   },
 };

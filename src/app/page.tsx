@@ -1,22 +1,18 @@
 "use client";
 
-import * as React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Home, Phone, Mail, MapPin, Instagram, Images, Ruler, Palette } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-
-const fadeIn = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
 const features = [
-  { title: "Flooring & Surfaces", desc: "Hardwood, LVP, tile, carpet, and refinishing with meticulous project management.", icon: <Home className="h-6 w-6" aria-hidden /> },
-  { title: "Design & Color Consultation", desc: "Cohesive palettes, finishes, and space planning tailored to Idaho lifestyles.", icon: <Palette className="h-6 w-6" aria-hidden /> },
-  { title: "Custom Installations", desc: "Staircases, trim, built-ins, and statement details executed by vetted trades.", icon: <Ruler className="h-6 w-6" aria-hidden /> },
+  {
+    title: "Flooring & Surfaces",
+    desc: "Hardwood, LVP, tile, carpet, and refinishing with meticulous project management.",
+  },
+  {
+    title: "Design & Color Consultation",
+    desc: "Cohesive palettes, finishes, and space planning tailored to Idaho lifestyles.",
+  },
+  {
+    title: "Custom Installations",
+    desc: "Staircases, trim, built-ins, and statement details executed by vetted trades.",
+  },
 ];
 
 const steps = [
@@ -27,183 +23,277 @@ const steps = [
 ];
 
 const gallery = [
-  { src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1800&auto=format&fit=crop", alt: "Warm oak living room with layered textures" },
-  { src: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1800&auto=format&fit=crop", alt: "Modern kitchen with neutral stone and wood" },
-  { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1800&auto=format&fit=crop", alt: "Light-filled dining nook with built-ins" },
-  { src: "https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1800&auto=format&fit=crop", alt: "Tranquil bedroom palette" },
+  { src: "/living.jpg", alt: "Open living space" },
+  { src: "/kitchen.jpg", alt: "Modern kitchen remodel" },
+  { src: "/bathroom.jpg", alt: "Modern bathroom design" },
+  { src: "/tile-floor.jpg", alt: "Stone flooring detail" },
+  { src: "/bedroom.jpg", alt: "Soft neutral bedroom design" },
+  { src: "/outdoor.jpg", alt: "Outdoor patio and entertaining space" },
+  { src: "/kitchen-2.jpg", alt: "Bright kitchen design" },
+  { src: "/shower.jpg", alt: "Custom shower install" },
 ];
 
 export default function InteriorsOfIdahoLanding() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      {/* Header */}
-      <header className="sticky top-0 z-40 w-full backdrop-blur border-b border-slate-200 bg-white/70">
-        <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-slate-900" aria-hidden />
-            <span className="font-semibold tracking-tight">Interiors of Idaho</span>
+      <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/90">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-3">
+            <img
+              src="/idaho-logo.jpeg"
+              alt="Interiors of Idaho logo"
+              className="h-12 w-auto"
+            />
           </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm">
+
+          <nav className="hidden items-center gap-6 text-sm md:flex">
             <a href="#services" className="hover:opacity-70">Services</a>
             <a href="#process" className="hover:opacity-70">Process</a>
             <a href="#work" className="hover:opacity-70">Work</a>
             <a href="#about" className="hover:opacity-70">About</a>
             <a href="#contact" className="hover:opacity-70">Contact</a>
           </nav>
-          <Button asChild className="rounded-2xl">
-            <a href="#contact" className="inline-flex items-center">Book a consult <ArrowRight className="ml-2 h-4 w-4" /></a>
-          </Button>
+
+          <a
+            href="#contact"
+            className="inline-flex items-center rounded-2xl bg-slate-900 px-4 py-2 text-white"
+          >
+            Book a consult
+          </a>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative min-h-[78vh] overflow-hidden flex items-center">
+        <div className="absolute inset-0 -z-20">
           <img
             src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2200&auto=format&fit=crop"
-            alt="Elegant interior hero"
-            className="h-[680px] w-full object-cover"
+            alt="Premium Idaho interior"
+            className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-white/0" />
         </div>
-        <div className="mx-auto max-w-7xl px-6 pt-28 pb-20">
-          <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }} className="max-w-2xl">
-            <p className="uppercase tracking-[0.2em] text-xs text-slate-600">Treasure Valley • Coeur D'Alene • Sun Valley</p>
-            <h1 className="mt-3 text-4xl md:text-6xl font-medium leading-tight">
-              Modern Idaho interiors, crafted with precision.
-            </h1>
-            <p className="mt-5 text-lg text-slate-700">
-              From concept to installation, we deliver refined spaces—flooring, finishes, and furnishings—managed end-to-end for a seamless experience.
+
+        <div className="absolute inset-0 -z-10 bg-black/55" />
+
+        <div className="pointer-events-none absolute inset-0 -z-0">
+          <div className="absolute left-[18%] top-[14%] h-2 w-2 rounded-full bg-white/80 shadow-[0_0_18px_rgba(255,255,255,0.9)]" />
+          <div className="absolute left-[33%] top-[18%] h-2 w-2 rounded-full bg-white/70 shadow-[0_0_18px_rgba(255,255,255,0.9)]" />
+          <div className="absolute left-[47%] top-[12%] h-2 w-2 rounded-full bg-white/75 shadow-[0_0_18px_rgba(255,255,255,0.9)]" />
+          <div className="absolute left-[60%] top-[20%] h-2 w-2 rounded-full bg-white/70 shadow-[0_0_18px_rgba(255,255,255,0.9)]" />
+          <div className="absolute left-[76%] top-[16%] h-2 w-2 rounded-full bg-white/75 shadow-[0_0_18px_rgba(255,255,255,0.9)]" />
+          <div className="absolute left-[82%] top-[28%] h-2 w-2 rounded-full bg-white/70 shadow-[0_0_18px_rgba(255,255,255,0.9)]" />
+          <div className="absolute left-[70%] top-[58%] h-2 w-2 rounded-full bg-white/75 shadow-[0_0_18px_rgba(255,255,255,0.9)]" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6 py-24">
+          <div className="max-w-4xl">
+            <p className="text-xs uppercase tracking-[0.22em] text-white/80">
+              SERVING ALL OF IDAHO
             </p>
-            <div className="mt-6 flex gap-3">
-              <Button size="lg" className="rounded-2xl" asChild>
-                <a href="#contact">Start your project</a>
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-2xl" asChild>
-                <a href="#work">See recent work</a>
-              </Button>
+
+            <h1 className="mt-4 text-5xl font-semibold leading-[0.95] text-white md:text-7xl">
+              Premium interiors
+            </h1>
+
+            <h2 className="mt-3 text-4xl font-light leading-tight text-white/90 md:text-6xl">
+              crafted with precision
+            </h2>
+
+            <p className="mt-8 max-w-3xl text-xl leading-relaxed text-white/85">
+              From concept to installation, we bring refined flooring, finishes, and
+              spaces to life. Interior remodeling managed end-to-end for a seamless
+              experience.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="rounded-full bg-white px-8 py-4 text-lg font-medium text-slate-900"
+              >
+                Request a Free Estimate
+              </a>
+              <a
+                href="#work"
+                className="rounded-full border border-white/40 bg-white/10 px-8 py-4 text-lg font-medium text-white backdrop-blur-sm"
+              >
+                See our Gallery
+              </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section id="services" className="py-20 bg-slate-50">
+      <section id="services" className="bg-slate-50 py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-2xl mb-10">
-            <h2 className="text-3xl md:text-4xl font-semibold">Full-service interiors & execution</h2>
-            <p className="mt-3 text-slate-600">Transparent proposals, schedule discipline, and site-ready project plans.</p>
+          <div className="mb-10 max-w-2xl">
+            <h2 className="text-3xl font-semibold md:text-4xl">
+              Full-service interiors & execution
+            </h2>
+            <p className="mt-3 text-slate-600">
+              Transparent proposals, schedule discipline, and site-ready project plans.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+
+          <div className="grid gap-6 md:grid-cols-3">
             {features.map((f) => (
-              <Card key={f.title} className="rounded-2xl">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    {f.icon}
-                    {f.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600">{f.desc}</p>
-                </CardContent>
-              </Card>
+              <div
+                key={f.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6"
+              >
+                <h3 className="text-lg font-semibold">{f.title}</h3>
+                <p className="mt-3 text-slate-600">{f.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process */}
       <section id="process" className="py-20">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold">A clear, builder-friendly process</h2>
-            <p className="mt-3 text-slate-600">We plan like PMs and design like artisans—so homeowners and contractors stay aligned.</p>
+            <h2 className="text-3xl font-semibold md:text-4xl">
+              A clear, builder-friendly process
+            </h2>
+            <p className="mt-3 text-slate-600">
+              We plan like PMs and design like artisans—so homeowners and contractors stay aligned.
+            </p>
+
             <ul className="mt-6 space-y-3">
               {steps.map((s) => (
-                <li key={s} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5" aria-hidden />
-                  <span className="text-slate-700">{s}</span>
-                </li>
+                <li key={s} className="text-slate-700">• {s}</li>
               ))}
             </ul>
           </div>
+
           <div className="grid grid-cols-2 gap-3">
-            {gallery.slice(0, 3).map((g) => (
-              <img key={g.src} src={g.src} alt={g.alt} className="rounded-2xl object-cover h-48 w-full" />
+            {gallery.slice(0, 4).map((g) => (
+              <img
+                key={g.src}
+                src={g.src}
+                alt={g.alt}
+                className="h-48 w-full rounded-2xl object-cover"
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Gallery */}
-      <section id="work" className="py-20 bg-slate-50">
+      <section id="work" className="bg-slate-50 py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex items-center justify-between mb-8">
+          <div className="mb-8 flex items-center justify-between">
             <div>
-              <h2 className="text-3xl md:text-4xl font-semibold">Selected projects</h2>
-              <p className="mt-2 text-slate-600">A few recent transformations.</p>
+              <h2 className="text-3xl font-semibold md:text-4xl">
+                Selected projects
+              </h2>
+              <p className="mt-2 text-slate-600">
+                A few recent transformations.
+              </p>
             </div>
-            <Button variant="outline" className="rounded-2xl" asChild>
-              <a href="#contact" className="inline-flex items-center"><Images className="mr-2 h-4 w-4" />Request a full portfolio</a>
-            </Button>
+
+            <a
+              href="#contact"
+              className="rounded-2xl border border-slate-300 bg-white px-4 py-2 text-slate-900"
+            >
+              Request a full portfolio
+            </a>
           </div>
-          <div className="grid md:grid-cols-4 gap-4">
+
+          <div className="grid gap-4 md:grid-cols-4">
             {gallery.map((g) => (
-              <img key={g.src} src={g.src} alt={g.alt} className="rounded-2xl object-cover h-56 w-full" />
+              <img
+                key={g.src}
+                src={g.src}
+                alt={g.alt}
+                className="h-56 w-full rounded-2xl object-cover"
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* About */}
       <section id="about" className="py-20">
         <div className="mx-auto max-w-5xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold">Rooted in Idaho craftsmanship</h2>
-          <p className="mt-4 text-slate-700 max-w-3xl mx-auto">
-            Interiors of Idaho offers design, sourcing, and installation under one roof.
-            We’re known for precise scheduling, transparent budgets, and considerate site practices—so your home looks extraordinary and the process feels easy.
+          <h2 className="text-3xl font-semibold md:text-4xl">
+            Rooted in Idaho craftsmanship
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-slate-700">
+            Interiors of Idaho offers design, sourcing, and installation under
+            one roof. We’re known for precise scheduling, transparent budgets,
+            and considerate site practices—so your home looks extraordinary and
+            the process feels easy.
           </p>
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="py-20 bg-slate-50">
+      <section id="contact" className="bg-slate-50 py-20">
         <div className="mx-auto max-w-5xl px-6">
-          <div className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="grid items-start gap-10 md:grid-cols-2">
             <div>
-              <h2 className="text-3xl md:text-4xl font-semibold">Let’s plan your project</h2>
-              <p className="mt-3 text-slate-600">Tell us a bit about your space and timeline. We’ll respond within one business day.</p>
+              <h2 className="text-3xl font-semibold md:text-4xl">
+                Let’s plan your project
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Tell us a bit about your space and timeline. We’ll respond
+                within one business day.
+              </p>
+
               <div className="mt-6 space-y-3 text-slate-700">
-                <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> (208) 204-6061</p>
-                <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> interiorsofidaho@gmail.com</p>
-                <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Serving all of Idaho</p>
-                <p className="flex items-center gap-2"><Instagram className="h-4 w-4" /> @interiors.of.idaho</p>
+                <p>(208) 204-6061</p>
+                <p>interiorsofidaho@gmail.com</p>
+                <p>Serving all of Idaho</p>
+                <p>@interiors.of.idaho</p>
               </div>
             </div>
-            <Card className="rounded-2xl">
-              <CardContent className="p-6">
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid md:grid-cols-2 gap-3">
-                    <Input placeholder="Name" required />
-                    <Input type="email" placeholder="Email" required />
-                  </div>
-                  <Input placeholder="Phone" />
-                  <Input placeholder="City / Neighborhood" />
-                  <Textarea placeholder="Tell us about your project…" className="min-h-[120px]" />
-                  <Button type="submit" className="rounded-2xl w-full">Submit inquiry</Button>
-                </form>
-              </CardContent>
-            </Card>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid gap-3 md:grid-cols-2">
+                  <input
+                    className="w-full rounded-xl border border-slate-300 px-4 py-3"
+                    placeholder="Name"
+                    required
+                  />
+                  <input
+                    className="w-full rounded-xl border border-slate-300 px-4 py-3"
+                    type="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+
+                <input
+                  className="w-full rounded-xl border border-slate-300 px-4 py-3"
+                  placeholder="Phone"
+                />
+                <input
+                  className="w-full rounded-xl border border-slate-300 px-4 py-3"
+                  placeholder="City / Neighborhood"
+                />
+                <textarea
+                  className="min-h-[120px] w-full rounded-xl border border-slate-300 px-4 py-3"
+                  placeholder="Tell us about your project…"
+                />
+                <button
+                  type="submit"
+                  className="w-full rounded-2xl bg-slate-900 px-4 py-3 text-white"
+                >
+                  Submit inquiry
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-12">
-        <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-600">© {new Date().getFullYear()} Interiors of Idaho. All rights reserved.</p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
+          <p className="text-sm text-slate-600">
+            © {new Date().getFullYear()} Interiors of Idaho. All rights reserved.
+          </p>
+
           <div className="text-xs text-slate-500">
-            <a href="#" className="hover:underline">Privacy</a> · <a href="#" className="hover:underline">Terms</a>
+            <a href="#" className="hover:underline">Privacy</a>{" "}
+            ·{" "}
+            <a href="#" className="hover:underline">Terms</a>
           </div>
         </div>
       </footer>
