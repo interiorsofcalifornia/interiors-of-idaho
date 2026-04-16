@@ -14,21 +14,9 @@ const fadeIn = {
 };
 
 const features = [
-  {
-    title: "Flooring & Surfaces",
-    desc: "Hardwood, LVP, tile, carpet, and refinishing with meticulous project management.",
-    icon: <Home className="h-6 w-6" aria-hidden />,
-  },
-  {
-    title: "Design & Color Consultation",
-    desc: "Cohesive palettes, finishes, and space planning tailored to Idaho lifestyles.",
-    icon: <Palette className="h-6 w-6" aria-hidden />,
-  },
-  {
-    title: "Custom Installations",
-    desc: "Staircases, trim, built-ins, and statement details executed by vetted trades.",
-    icon: <Ruler className="h-6 w-6" aria-hidden />,
-  },
+  { title: "Flooring & Surfaces", desc: "Hardwood, LVP, tile, carpet, and refinishing with meticulous project management.", icon: <Home className="h-6 w-6" aria-hidden /> },
+  { title: "Design & Color Consultation", desc: "Cohesive palettes, finishes, and space planning tailored to Idaho lifestyles.", icon: <Palette className="h-6 w-6" aria-hidden /> },
+  { title: "Custom Installations", desc: "Staircases, trim, built-ins, and statement details executed by vetted trades.", icon: <Ruler className="h-6 w-6" aria-hidden /> },
 ];
 
 const steps = [
@@ -38,21 +26,11 @@ const steps = [
   "White-glove installation & walkthrough",
 ];
 
-const processGallery = [
+const gallery = [
   { src: "/living.jpg", alt: "Modern living room with dark flooring and art" },
-  { src: "/kitchen.jpg", alt: "Modern kitchen remodel with stone countertop" },
-  { src: "/bathroom.jpg", alt: "Modern bathroom design with glass shower" },
-];
-
-const workGallery = [
-  { src: "/living.jpg", alt: "Modern living room with dark flooring and art" },
-  { src: "/kitchen.jpg", alt: "Modern kitchen remodel with stone countertop" },
-  { src: "/bathroom.jpg", alt: "Modern bathroom design with glass shower" },
-  { src: "/shower.jpg", alt: "Custom shower installation" },
+  { src: "/kitchen.jpg", alt: "Kitchen with stone countertop and warm finishes" },
+  { src: "/bathroom.jpg", alt: "Modern bathroom with custom shower" },
   { src: "/bedroom.jpg", alt: "Soft neutral bedroom design" },
-  { src: "/outdoor.jpg", alt: "Outdoor patio and entertaining space" },
-  { src: "/kitchen-2.jpg", alt: "Bright kitchen design" },
-  { src: "/tile-floor.jpg", alt: "Stone flooring detail" },
 ];
 
 export default function InteriorsOfIdahoLanding() {
@@ -62,13 +40,8 @@ export default function InteriorsOfIdahoLanding() {
       <header className="sticky top-0 z-40 w-full backdrop-blur border-b border-slate-200 bg-white/70">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img
-              src="/idaho-logo.jpeg"
-              alt="Interiors of Idaho logo"
-              className="h-12 w-auto"
-            />
+            <img src="/idaho-logo.jpeg" alt="Interiors of Idaho logo" className="h-12 w-auto" />
           </div>
-
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#services" className="hover:opacity-70">Services</a>
             <a href="#process" className="hover:opacity-70">Process</a>
@@ -76,12 +49,8 @@ export default function InteriorsOfIdahoLanding() {
             <a href="#about" className="hover:opacity-70">About</a>
             <a href="#contact" className="hover:opacity-70">Contact</a>
           </nav>
-
           <Button asChild className="rounded-2xl">
-            <a href="#contact" className="inline-flex items-center">
-              Book a consult
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            <a href="#contact" className="inline-flex items-center">Book a consult <ArrowRight className="ml-2 h-4 w-4" /></a>
           </Button>
         </div>
       </header>
@@ -94,36 +63,22 @@ export default function InteriorsOfIdahoLanding() {
             alt="Elegant Idaho interior hero"
             className="h-[680px] w-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-white/0" />
         </div>
-
         <div className="mx-auto max-w-7xl px-6 pt-28 pb-20">
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="max-w-2xl"
-          >
-            <p className="uppercase tracking-[0.2em] text-xs text-white/80">
-              Treasure Valley • Boise • Coeur d'Alene
-            </p>
-
-            <h1 className="mt-3 text-4xl md:text-6xl font-medium leading-tight text-white">
+          <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }} className="max-w-2xl">
+            <p className="uppercase tracking-[0.2em] text-xs text-slate-600">Treasure Valley • Coeur d'Alene • Sun Valley</p>
+            <h1 className="mt-3 text-4xl md:text-6xl font-medium leading-tight">
               Modern Idaho interiors, crafted with precision.
             </h1>
-
-            <p className="mt-5 text-lg text-white/90">
-              From concept to installation, we deliver refined spaces—flooring, finishes,
-              and furnishings—managed end-to-end for a seamless experience.
+            <p className="mt-5 text-lg text-slate-700">
+              From concept to installation, we deliver refined spaces—flooring, finishes, and furnishings—managed end-to-end for a seamless experience.
             </p>
-
             <div className="mt-6 flex gap-3">
-              <Button size="lg" className="rounded-2xl bg-white text-slate-900 hover:bg-white/90" asChild>
+              <Button size="lg" className="rounded-2xl" asChild>
                 <a href="#contact">Start your project</a>
               </Button>
-
-              <Button size="lg" variant="outline" className="rounded-2xl border-white text-white bg-white/10 hover:bg-white/20" asChild>
+              <Button size="lg" variant="outline" className="rounded-2xl" asChild>
                 <a href="#work">See recent work</a>
               </Button>
             </div>
@@ -136,11 +91,8 @@ export default function InteriorsOfIdahoLanding() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl mb-10">
             <h2 className="text-3xl md:text-4xl font-semibold">Full-service interiors & execution</h2>
-            <p className="mt-3 text-slate-600">
-              Transparent proposals, schedule discipline, and site-ready project plans.
-            </p>
+            <p className="mt-3 text-slate-600">Transparent proposals, schedule discipline, and site-ready project plans.</p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             {features.map((f) => (
               <Card key={f.title} className="rounded-2xl">
@@ -164,10 +116,7 @@ export default function InteriorsOfIdahoLanding() {
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold">A clear, builder-friendly process</h2>
-            <p className="mt-3 text-slate-600">
-              We plan like PMs and design like artisans—so homeowners and contractors stay aligned.
-            </p>
-
+            <p className="mt-3 text-slate-600">We plan like PMs and design like artisans—so homeowners and contractors stay aligned.</p>
             <ul className="mt-6 space-y-3">
               {steps.map((s) => (
                 <li key={s} className="flex items-start gap-3">
@@ -177,15 +126,9 @@ export default function InteriorsOfIdahoLanding() {
               ))}
             </ul>
           </div>
-
           <div className="grid grid-cols-2 gap-3">
-            {processGallery.map((g) => (
-              <img
-                key={g.src}
-                src={g.src}
-                alt={g.alt}
-                className="rounded-2xl object-cover h-48 w-full"
-              />
+            {gallery.slice(0, 3).map((g) => (
+              <img key={g.src} src={g.src} alt={g.alt} className="rounded-2xl object-cover h-48 w-full" />
             ))}
           </div>
         </div>
@@ -197,27 +140,15 @@ export default function InteriorsOfIdahoLanding() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold">Selected projects</h2>
-              <p className="mt-2 text-slate-600">
-                A few recent transformations across Idaho homes and remodels.
-              </p>
+              <p className="mt-2 text-slate-600">A few recent transformations across Idaho.</p>
             </div>
-
             <Button variant="outline" className="rounded-2xl" asChild>
-              <a href="#contact" className="inline-flex items-center">
-                <Images className="mr-2 h-4 w-4" />
-                Request a full portfolio
-              </a>
+              <a href="#contact" className="inline-flex items-center"><Images className="mr-2 h-4 w-4" />Request a full portfolio</a>
             </Button>
           </div>
-
           <div className="grid md:grid-cols-4 gap-4">
-            {workGallery.map((g) => (
-              <img
-                key={g.src}
-                src={g.src}
-                alt={g.alt}
-                className="rounded-2xl object-cover h-56 w-full"
-              />
+            {gallery.map((g) => (
+              <img key={g.src} src={g.src} alt={g.alt} className="rounded-2xl object-cover h-56 w-full" />
             ))}
           </div>
         </div>
@@ -229,8 +160,7 @@ export default function InteriorsOfIdahoLanding() {
           <h2 className="text-3xl md:text-4xl font-semibold">Rooted in Idaho craftsmanship</h2>
           <p className="mt-4 text-slate-700 max-w-3xl mx-auto">
             Interiors of Idaho offers design, sourcing, and installation under one roof.
-            We’re known for precise scheduling, transparent budgets, and considerate site
-            practices—so your home looks extraordinary and the process feels easy.
+            We’re known for precise scheduling, transparent budgets, and considerate site practices—so your home looks extraordinary and the process feels easy.
           </p>
         </div>
       </section>
@@ -241,30 +171,14 @@ export default function InteriorsOfIdahoLanding() {
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold">Let’s plan your project</h2>
-              <p className="mt-3 text-slate-600">
-                Tell us a bit about your space and timeline. We’ll respond within one business day.
-              </p>
-
+              <p className="mt-3 text-slate-600">Tell us a bit about your space and timeline. We’ll respond within one business day.</p>
               <div className="mt-6 space-y-3 text-slate-700">
-                <p className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
-                  (208) 204-6061
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
-                  interiorsofidaho@gmail.com
-                </p>
-                <p className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
-                  Serving all of Idaho
-                </p>
-                <p className="flex items-center gap-2">
-                  <Instagram className="h-4 w-4" />
-                  @interiors.of.idaho
-                </p>
+                <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> (208) 204-6061</p>
+                <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> interiorsofidaho@gmail.com</p>
+                <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Serving all of Idaho</p>
+                <p className="flex items-center gap-2"><Instagram className="h-4 w-4" /> @interiors.of.idaho</p>
               </div>
             </div>
-
             <Card className="rounded-2xl">
               <CardContent className="p-6">
                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
@@ -286,9 +200,7 @@ export default function InteriorsOfIdahoLanding() {
       {/* Footer */}
       <footer className="py-12">
         <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-600">
-            © {new Date().getFullYear()} Interiors of Idaho. All rights reserved.
-          </p>
+          <p className="text-sm text-slate-600">© {new Date().getFullYear()} Interiors of Idaho. All rights reserved.</p>
           <div className="text-xs text-slate-500">
             <a href="#" className="hover:underline">Privacy</a> · <a href="#" className="hover:underline">Terms</a>
           </div>
