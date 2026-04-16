@@ -68,7 +68,7 @@ export default function InteriorsOfIdahoLanding() {
         </div>
         <div className="mx-auto max-w-7xl px-6 pt-28 pb-20">
           <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }} className="max-w-2xl">
-            <p className="uppercase tracking-[0.2em] text-xs text-slate-600">Bay Area • Sacramento • Napa</p>
+            <p className="uppercase tracking-[0.2em] text-xs text-slate-600">Treasure Valley • Coeur D'Alene • Sun Valley</p>
             <h1 className="mt-3 text-4xl md:text-6xl font-medium leading-tight">
               Modern Idaho interiors, crafted with precision.
             </h1>
@@ -141,7 +141,7 @@ export default function InteriorsOfIdahoLanding() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold">Selected projects</h2>
-              <p className="mt-2 text-slate-600">A few recent transformations across the Bay Area and Sacramento region.</p>
+              <p className="mt-2 text-slate-600">A few recent transformations.</p>
             </div>
             <Button variant="outline" className="rounded-2xl" asChild>
               <a href="#contact" className="inline-flex items-center"><Images className="mr-2 h-4 w-4" />Request a full portfolio</a>
