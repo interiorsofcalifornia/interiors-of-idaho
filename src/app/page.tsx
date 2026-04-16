@@ -15,7 +15,7 @@ const fadeIn = {
 
 const features = [
   { title: "Flooring & Surfaces", desc: "Hardwood, LVP, tile, carpet, and refinishing with meticulous project management.", icon: <Home className="h-6 w-6" aria-hidden /> },
-  { title: "Design & Color Consultation", desc: "Cohesive palettes, finishes, and space planning tailored to California lifestyles.", icon: <Palette className="h-6 w-6" aria-hidden /> },
+  { title: "Design & Color Consultation", desc: "Cohesive palettes, finishes, and space planning tailored to Idaho lifestyles.", icon: <Palette className="h-6 w-6" aria-hidden /> },
   { title: "Custom Installations", desc: "Staircases, trim, built-ins, and statement details executed by vetted trades.", icon: <Ruler className="h-6 w-6" aria-hidden /> },
 ];
 
@@ -33,7 +33,7 @@ const gallery = [
   { src: "https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1800&auto=format&fit=crop", alt: "Tranquil bedroom palette" },
 ];
 
-export default function InteriorsOfCaliforniaLanding() {
+export default function InteriorsOfIdahoLanding() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Header */}
@@ -41,7 +41,7 @@ export default function InteriorsOfCaliforniaLanding() {
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-xl bg-slate-900" aria-hidden />
-            <span className="font-semibold tracking-tight">Interiors of California</span>
+            <span className="font-semibold tracking-tight">Interiors of Idaho</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#services" className="hover:opacity-70">Services</a>
@@ -70,7 +70,7 @@ export default function InteriorsOfCaliforniaLanding() {
           <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }} className="max-w-2xl">
             <p className="uppercase tracking-[0.2em] text-xs text-slate-600">Bay Area • Sacramento • Napa</p>
             <h1 className="mt-3 text-4xl md:text-6xl font-medium leading-tight">
-              Modern California interiors, crafted with precision.
+              Modern Idaho interiors, crafted with precision.
             </h1>
             <p className="mt-5 text-lg text-slate-700">
               From concept to installation, we deliver refined spaces—flooring, finishes, and furnishings—managed end-to-end for a seamless experience.
@@ -158,9 +158,9 @@ export default function InteriorsOfCaliforniaLanding() {
       {/* About */}
       <section id="about" className="py-20">
         <div className="mx-auto max-w-5xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold">Rooted in California craftsmanship</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold">Rooted in Idaho craftsmanship</h2>
           <p className="mt-4 text-slate-700 max-w-3xl mx-auto">
-            Interiors of California offers design, sourcing, and installation under one roof.
+            Interiors of Idaho offers design, sourcing, and installation under one roof.
             We’re known for precise scheduling, transparent budgets, and considerate site practices—so your home looks extraordinary and the process feels easy.
           </p>
         </div>
@@ -174,10 +174,10 @@ export default function InteriorsOfCaliforniaLanding() {
               <h2 className="text-3xl md:text-4xl font-semibold">Let’s plan your project</h2>
               <p className="mt-3 text-slate-600">Tell us a bit about your space and timeline. We’ll respond within one business day.</p>
               <div className="mt-6 space-y-3 text-slate-700">
-                <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> (510) 833-8395</p>
-                <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> hello@interiorsofcalifornia.com</p>
-                <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Walnut Creek • Lafayette • East Bay</p>
-                <p className="flex items-center gap-2"><Instagram className="h-4 w-4" /> @interiors.of.california</p>
+                <p className="flex items-center gap-2"><Phone className="h-4 w-4" /> (208) 204-6061</p>
+                <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> interiorsofidaho@gmail.com</p>
+                <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Serving all of Idaho</p>
+                <p className="flex items-center gap-2"><Instagram className="h-4 w-4" /> @interiors.of.idaho</p>
               </div>
             </div>
             <Card className="rounded-2xl">
@@ -201,7 +201,7 @@ export default function InteriorsOfCaliforniaLanding() {
       {/* Footer */}
       <footer className="py-12">
         <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-600">© {new Date().getFullYear()} Interiors of California. All rights reserved.</p>
+          <p className="text-sm text-slate-600">© {new Date().getFullYear()} Interiors of Idaho. All rights reserved.</p>
           <div className="text-xs text-slate-500">
             <a href="#" className="hover:underline">Privacy</a> · <a href="#" className="hover:underline">Terms</a>
           </div>
